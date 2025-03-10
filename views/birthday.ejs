@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            padding: 50px;
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 10px 0;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <% if (isBirthday) { %>
+            <h1>🎉 Happy Birthday, <%= name %>! 🎂</h1>
+            <p>Wishing you a fantastic day filled with joy and happiness! 🥳</p>
+        <% } else { %>
+            <h1>Thank you! 🙏</h1>
+            <p>Today is not your birthday.</p>
+        <% } %>
+    </div>
+</body>
+</html>
