@@ -3,57 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter Your Name</title>
+    <title>Enter Your surname if you're the celebrant</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            background-color: pink;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
-            color: white;
-            padding: 20px;
-        }
-        .container {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 400px;
         }
         h1 {
-            font-size: 2rem;
-        }
-        p {
-            font-size: 1.2rem;
-        }
-        form {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
+            color: #333;
+            font-size: 24px;
         }
         input {
-            padding: 12px;
-            font-size: 1rem;
-            border: none;
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
             border-radius: 5px;
-            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            width: 300px;
         }
         button {
-            padding: 12px;
-            font-size: 1.2rem;
-            background-color: white;
+            padding: 10px 20px;
+            font-size: 16px;
             border: none;
+            background-color: #ff5733;
+            color: white;
             border-radius: 5px;
-            color: black;
             cursor: pointer;
+            margin-top: 10px;
         }
         button:hover {
-            background-c
+            background-color: #e04e2a;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎉 Enter your surname if you're the celebrant</h1>
+    
+    <form action="/birthday" method="GET">
+        <input type="text" name="name" placeholder="Enter Your surname" required>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
