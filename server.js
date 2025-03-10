@@ -4,7 +4,21 @@ const app = express();
 // Set EJS as the templating engine
 app.set("view engine", "ejs");
 
-// Define a GET route for birthday wishes
+// Middleware to parse URL-encoded form data
+app.use(express.urlencoded({ extended: true }));
+
+// Landing page - asks for name
+app.get("/", (req, res) => {
+    res.render("index");
+});
+
+// Handles name submission and redirects to birthday check page
+app.post("/submit", (req, res) => {
+    const name = req.body.name;
+    res.redirect(`/birthday?name=${encodeURIComponent(name)}`);
+});
+
+// Birthday check page
 app.get("/birthday", (req, res) => {
     const name = req.query.name;
 

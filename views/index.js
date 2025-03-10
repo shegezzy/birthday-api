@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Page</title>
+    <title>Enter Your Name</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,37 +19,34 @@
             display: inline-block;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
-        p {
-            font-size: 1.5rem;
+        input {
+            padding: 10px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
         }
-        .back {
-            margin-top: 20px;
-            display: inline-block;
-            text-decoration: none;
+        button {
             padding: 10px 15px;
             font-size: 1.2rem;
             background-color: white;
+            border: none;
             border-radius: 5px;
-            color: black;
+            cursor: pointer;
         }
-        .back:hover {
+        button:hover {
             background-color: lightgray;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <% if (isBirthday) { %>
-            <h1>🎉 Happy Birthday, <%= name %>! 🎂</h1>
-            <p>Wishing you a fantastic day filled with joy and happiness! 🥳</p>
-        <% } else { %>
-            <h1>Thank you! 🙏</h1>
-            <p>Today is not your birthday.</p>
-        <% } %>
-        <br>
-        <a href="/" class="back">Go Back</a>
+        <h1>🎉 Enter Your Name 🎂</h1>
+        <form action="/submit" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <button type="submit">Check Birthday</button>
+        </form>
     </div>
 </body>
 </html>
