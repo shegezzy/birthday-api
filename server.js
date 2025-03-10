@@ -14,16 +14,16 @@ app.get("/", (req, res) => {
 
 // Handles name submission and redirects to birthday check page
 app.post("/submit", (req, res) => {
-    const name = req.body.name;
+    const name = req.body.name.trim();
     res.redirect(`/birthday?name=${encodeURIComponent(name)}`);
 });
 
 // Birthday check page
 app.get("/birthday", (req, res) => {
-    const name = req.query.name;
+    const name = req.query.name.trim();
 
-    if (name === "Sanyaolu") {
-        res.render("birthday", { name, isBirthday: true });
+    if (name.toLowerCase() === "sanyaolu") {
+        res.render("birthday", { name: "Mr Sanyaolu Adefemi", isBirthday: true });
     } else {
         res.render("birthday", { name, isBirthday: false });
     }
