@@ -3,53 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter Your surname if you're the celebrant</title>
+    <title>Enter Your Name</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             text-align: center;
             background-color: pink;
+            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
-        h1 {
-            color: #333;
-            font-size: 24px;
-        }
-        input {
+        input, button {
             padding: 10px;
-            font-size: 16px;
-            margin: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            text-align: center;
-            width: 300px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            background-color: #ff5733;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
+            font-size: 18px;
             margin-top: 10px;
-        }
-        button:hover {
-            background-color: #e04e2a;
         }
     </style>
 </head>
 <body>
 
-    <h1>🎉 Enter your surname if you're the celebrant</h1>
-    
-    <form action="/birthday" method="GET">
-        <input type="text" name="name" placeholder="Enter Your surname" required>
-        <button type="submit">Submit</button>
+    <h2>🎉 Enter Your Surname if You're the Celebrant</h2>
+
+    <form action="/birthday" method="POST">
+        <input type="text" name="name" placeholder="Enter your surname" required>
+        <button type="submit">Check Birthday</button>
     </form>
 
 </body>

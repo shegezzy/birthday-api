@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday</title>
+    <title>Birthday Message</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,44 +15,44 @@
             align-items: center;
             height: 100vh;
         }
-        h1 {
-            color: #333;
-            font-size: 28px;
-        }
-        p {
-            font-size: 18px;
-            color: #555;
-        }
-        .container {
+        .message {
             background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 80%;
         }
         .back-button {
+            margin-top: 20px;
             padding: 10px 20px;
             font-size: 16px;
-            border: none;
             background-color: #ff5733;
             color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
             text-decoration: none;
-            display: inline-block;
-        }
-        .back-button:hover {
-            background-color: #e04e2a;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>🎉 Happy Birthday, Mr. Sanyaolu Adefemi! 🎂</h1>
-        <p>Wishing you a fantastic day filled with joy and happiness! <br>From the M4Ace Backend Team.</p>
+    <div class="message">
+        <h1><%= message %></h1>
         <a href="/" class="back-button">⬅ Go Back</a>
     </div>
+
+    <!-- Confetti Effect -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.0"></script>
+    <script>
+        const message = "<%= message %>";
+        if (message.includes("Happy Birthday")) {
+            const confettiSettings = {
+                particleCount: 200,
+                spread: 100,
+                origin: { y: 0.6 },
+            };
+            confetti(confettiSettings);
+        }
+    </script>
 
 </body>
 </html>
