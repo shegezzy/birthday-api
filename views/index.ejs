@@ -4,32 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enter Your Name</title>
-    <style>
-        body {
-            text-align: center;
-            background-color: pink;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        input, button {
-            padding: 10px;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-
-    <h2>🎉 Enter Your Surname if You're the Celebrant</h2>
-
-    <form action="/birthday" method="POST">
-        <input type="text" name="name" placeholder="Enter your surname" required>
-        <button type="submit">Check Birthday</button>
-    </form>
-
+    <div class="container">
+        <h1>Enter Your Surname</h1>
+        <p>If today is your birthday, type your surname below:</p>
+        <form action="/birthday" method="POST">
+            <input type="text" name="name" placeholder="Enter Your Surname" required>
+            <button type="submit" class="btn">Check Birthday</button>
+        </form>
+    </div>
 </body>
 </html>

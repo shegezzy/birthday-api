@@ -4,55 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Message</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: pink;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .message {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 80%;
-        }
-        .back-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #ff5733;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-
-    <div class="message">
+    <canvas id="confetti" style="display: <%= showConfetti ? 'block' : 'none' %>; "></canvas>
+    <div class="container">
         <h1><%= message %></h1>
-        <a href="/" class="back-button">⬅ Go Back</a>
+        <p><%= subtext %></p>
+        <a href="/" class="btn">Go Back</a>
     </div>
 
-    <!-- Confetti Effect -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.0"></script>
-    <script>
-        const message = "<%= message %>";
-        if (message.includes("Happy Birthday")) {
-            const confettiSettings = {
-                particleCount: 200,
-                spread: 100,
-                origin: { y: 0.6 },
-            };
-            confetti(confettiSettings);
-        }
-    </script>
-
+    <% if (showConfetti) { %>
+    <script src="/confetti.js"></script>
+    <% } %>
 </body>
 </html>

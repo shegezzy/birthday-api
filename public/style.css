@@ -1,0 +1,69 @@
+/* General styling */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #007bff, #ff5733, #ffcc00); /* Blue, Orange, Yellow */
+    color: white;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Birthday message container */
+.container {
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent white */
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+h1 {
+    font-size: 28px;
+    color: #ffcc00; /* Yellow */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Text */
+p {
+    font-size: 16px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #ff5733; /* Orange */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: #ff2200;
+    transform: scale(1.05);
+}
+
+/* Confetti effect */
+canvas#confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
